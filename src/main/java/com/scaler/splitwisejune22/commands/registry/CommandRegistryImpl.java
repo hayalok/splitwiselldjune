@@ -2,6 +2,7 @@ package com.scaler.splitwisejune22.commands.registry;
 
 import com.scaler.splitwisejune22.commands.Command;
 import com.scaler.splitwisejune22.commands.CommandKeywords;
+import com.scaler.splitwisejune22.exceptions.AddingUserNotAdmin;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -33,7 +34,7 @@ public class CommandRegistryImpl implements CommandRegistry {
     }
 
     @Override
-    public boolean executeCommandLine(String commandLine) {
+    public boolean executeCommandLine(String commandLine) throws AddingUserNotAdmin {
         for (Command command: commands) {
             if (command.parse(commandLine)) {
                 command.execute(commandLine);

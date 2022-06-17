@@ -1,6 +1,7 @@
 package com.scaler.splitwisejune22.commands.registry;
 
 import com.scaler.splitwisejune22.commands.Command;
+import com.scaler.splitwisejune22.exceptions.AddingUserNotAdmin;
 
 public interface CommandRegistry {
 
@@ -10,7 +11,7 @@ public interface CommandRegistry {
 
     void removeCommand(Command command);
 
-    boolean executeCommandLine(String commandLine);
+    boolean executeCommandLine(String commandLine) throws AddingUserNotAdmin;
 
 //    // Upd
 //    String suggestCommandBasedOnPrefix(String commandPrefix);

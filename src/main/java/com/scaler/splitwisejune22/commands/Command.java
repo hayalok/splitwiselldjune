@@ -1,5 +1,7 @@
 package com.scaler.splitwisejune22.commands;
 
+import com.scaler.splitwisejune22.exceptions.AddingUserNotAdmin;
+
 public interface Command {
 
     /**
@@ -11,5 +13,5 @@ public interface Command {
      */
     boolean parse(String commandLine);
 
-    void execute(String commandLine);
+    void execute(String commandLine) throws AddingUserNotAdmin;
 }

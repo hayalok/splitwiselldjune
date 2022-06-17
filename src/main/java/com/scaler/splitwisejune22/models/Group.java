@@ -27,4 +27,17 @@ public class Group extends BaseModel {
     // 1 : m
     //   expenses
     //   |         | group_id
+
+
+    @Override
+    public String toString() {
+        return "Group{" +
+                "name='" + name + '\'' +
+                ", participants=" + participants +
+                ", admins=" + admins +
+                ", description='" + description + '\'' +
+                ", createdBy=" + createdBy +
+                ", expenses=" + expenses +
+                '}';
+    }
 }
